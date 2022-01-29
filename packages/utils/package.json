@@ -1,0 +1,14 @@
+{
+  "name": "@antti/utils",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch"
+  },
+  "devDependencies": {
+    "typescript": "^4.4.4"
+  }
+}
