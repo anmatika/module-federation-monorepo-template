@@ -12,6 +12,10 @@
     {
       "path": "../../libs/utils",
       "prepend": false
+    },
+    {
+      "path": "../../libs/types",
+      "prepend": false
     }
   ]
 }
