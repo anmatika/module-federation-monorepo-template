@@ -10,14 +10,14 @@
     "moduleResolution": "node",
     "esModuleInterop": true,
     "rootDir": ".",
-    "baseUrl": "./packages",
+    "baseUrl": ".",
     "composite": true,
     "declaration": true,
     "declarationMap": true,
     "sourceMap": true,
     "paths": {
       "@antti/*": [
-        "./*/src"
+        "./libs/*/src"
       ]
     }
   }

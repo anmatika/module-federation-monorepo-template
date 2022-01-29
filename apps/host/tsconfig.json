@@ -10,7 +10,7 @@
   ],
   "references": [
     {
-      "path": "../utils",
+      "path": "../../libs/utils",
       "prepend": false
     }
   ]

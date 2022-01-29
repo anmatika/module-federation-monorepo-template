@@ -9,6 +9,7 @@
     "watch": "tsc --watch"
   },
   "devDependencies": {
+    "kill-port": "^1.6.1",
     "typescript": "^4.4.4"
   }
 }

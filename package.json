@@ -5,6 +5,13 @@
   "license": "MIT",
   "private": true,
   "workspaces": [
-    "packages/*"
-  ]
+    "apps/*",
+    "libs/*"
+  ],
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  },
+  "scripts": {
+    "start": "lerna run --parallel kill-port && lerna run --parallel start"
+  }
 }
