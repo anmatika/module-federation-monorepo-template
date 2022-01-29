@@ -1,8 +1,10 @@
-# INTRO
+# TYPESCRIPT MONOREPO MODULE FEDERATION TEMPLATE
+
+## Desc
 
 Template for Typescript monorepo with module federation and shared libs
 
-# Start
+## Install deps and start apps
 
 At `/`
 
@@ -11,6 +13,6 @@ yarn
 yarn start
 ```
 
-Lerna spins up the apps at
+Lerna starts up apps at
 - :8080 --> host app
 - :8081 --> header app
