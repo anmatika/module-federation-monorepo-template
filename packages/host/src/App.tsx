@@ -1,18 +1,21 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import addNumbers from '@antti/utils';
-
 import "./index.scss";
 
-const App = () => {
+const Header = React.lazy(() => import('header/Header'));
+
+export default () => {
   const n = addNumbers(1, 2)
 
-  return <div className="mt-10 text-3xl mx-auto max-w-6xl">
-    <div>Name: host</div>
-    <div>Framework: react</div>
-    <div>Language: TypeScript</div>
-    <div>CSS: Tailwind</div>
-    <div>Add numbers = {n} </div>
-  </div>
+  return (
+    <div className="mt-10 text-3xl mx-auto max-w-6xl h-screen bg-indigo-50 ">
+      <React.Suspense fallback="Loading Header...">
+        <Header />
+      </React.Suspense>
+      <div className="mx-auto bg-blue-100 h-full">
+        <div className="font-bold">Host</div>
+        <p className="text-base">Add numbers result from @antti/utils : {n} </p>
+      </div>
+    </div>
+  )
 };
-ReactDOM.render(<App />, document.getElementById("app"));

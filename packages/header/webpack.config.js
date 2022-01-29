@@ -1,20 +1,18 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
-const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 const deps = require("./package.json").dependencies;
 module.exports = {
   output: {
-    publicPath: "http://localhost:8080/",
+    publicPath: "http://localhost:8081/",
   },
 
   resolve: {
     extensions: [".tsx", ".ts", ".jsx", ".js", ".json"],
-    plugins: [new TsconfigPathsPlugin({/* options: see below */})]
   },
 
   devServer: {
-    port: 8080,
+    port: 8081,
     historyApiFallback: true,
   },
 
@@ -41,26 +39,21 @@ module.exports = {
       {
         test: /\.(ts|tsx|js|jsx)$/,
         exclude: /node_modules/,
-        use: [
-        {
-          loader: 'babel-loader',
+        use: {
+          loader: "babel-loader",
         },
-        {
-          loader: 'ts-loader'
-        }
-      ]
       },
     ],
   },
 
   plugins: [
     new ModuleFederationPlugin({
-      name: "host",
+      name: "header",
       filename: "remoteEntry.js",
-      remotes: {
-        header: "header@http://localhost:8081/remoteEntry.js"
+      remotes: {},
+      exposes: {
+        "./Header" : "./src/Header"
       },
-      exposes: {},
       shared: {
         ...deps,
         react: {
