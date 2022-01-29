@@ -1,4 +1,4 @@
-# TYPESCRIPT MONOREPO MODULE FEDERATION TEMPLATE
+# Typescript monorepo module federation template
 
 ## Desc
 
