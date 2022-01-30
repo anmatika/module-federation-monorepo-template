@@ -1,17 +1,10 @@
 import React from "react";
 import addNumbers from '@antti/utils';
-import { IHeaderProps } from '@antti/types'
 import "./index.scss";
-// const Header = React.lazy(() =>
-//   import('header/Header')
-//     .then((module) => (module.default)),
-// );
-
-// const Header = React.lazy(() => import('header/Header').then((module) => (module.default = Header)));
 
 const Header = React.lazy(() => import('header/Header'));
 
-export default () => {
+const HostApp = () => {
   const n = addNumbers(1, 2)
 
   return (
@@ -26,3 +19,5 @@ export default () => {
     </div>
   )
 };
+
+export default HostApp;

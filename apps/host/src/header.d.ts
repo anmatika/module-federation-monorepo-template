@@ -1,11 +1,6 @@
 declare module 'header/Header' {
-  const Header: any;
+  type IHeaderProps = import('@antti/types').IHeaderProps
+
+  const Header: (props: IHeaderProps) => import('react').ReactElement
   export default Header;
 }
-// }
-// declare module 'header/Header' {
-//   type T = import('@antti/types').IHeaderProps
-
-//   const Header: (props: T) => React.FC<T>
-//   export default Header;
-// }
