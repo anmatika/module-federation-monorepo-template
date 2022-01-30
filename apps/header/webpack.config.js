@@ -1,5 +1,6 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 const deps = require("./package.json").dependencies;
 module.exports = {
@@ -9,6 +10,7 @@ module.exports = {
 
   resolve: {
     extensions: [".tsx", ".ts", ".jsx", ".js", ".json"],
+    plugins: [new TsconfigPathsPlugin({/* options: see below */})]
   },
 
   devServer: {
@@ -39,15 +41,20 @@ module.exports = {
       {
         test: /\.(ts|tsx|js|jsx)$/,
         exclude: /node_modules/,
-        use: {
-          loader: "babel-loader",
+        use: [
+        {
+          loader: 'babel-loader',
         },
+        {
+          loader: 'ts-loader'
+        }
+      ]
       },
     ],
   },
 
   plugins: [
-    new ModuleFederationPlugin({
+       new ModuleFederationPlugin({
       name: "header",
       filename: "remoteEntry.js",
       remotes: {},

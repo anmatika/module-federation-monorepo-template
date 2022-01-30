@@ -8,6 +8,7 @@
     ],
     "strict": true,
     "jsx": "react",
+    "noEmitOnError": true,
     "moduleResolution": "node",
     "esModuleInterop": true,
     "rootDir": ".",
@@ -21,5 +22,5 @@
         "./libs/*/src"
       ]
     }
-  }
+  },
 }

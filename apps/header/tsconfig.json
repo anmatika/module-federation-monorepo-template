@@ -4,9 +4,14 @@
     "outDir": "./dist",
   },
   "include": [
-    "src",
+    "src/**/*",
+    "../../libs/**/src/*"
   ],
   "references": [
+    {
+      "path": "../../libs/utils",
+      "prepend": false
+    },
     {
       "path": "../../libs/types",
       "prepend": false

@@ -1,5 +1,6 @@
 import React from "react";
 import addNumbers from '@antti/utils';
+import { IHeaderProps } from '@antti/types'
 import "./index.scss";
 // const Header = React.lazy(() =>
 //   import('header/Header')
