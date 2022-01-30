@@ -8,7 +8,7 @@
   ],
   "references": [
     {
-      "path": "../../libs/utils",
+      "path": "../../libs/types",
       "prepend": false
     }
   ]

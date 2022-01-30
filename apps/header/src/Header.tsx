@@ -1,6 +1,7 @@
 import React from "react";
+import { IHeaderProps } from '@antti/types'
 
-const Header = (props) => {
+const Header = (props: IHeaderProps) => {
   const { title } = props;
 
   return (
