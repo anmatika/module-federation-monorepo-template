@@ -1,8 +1,8 @@
-import React from "react";
-import addNumbers from '@antti/utils';
-import "./index.scss";
+import React from 'react'
+import addNumbers from '@antti/utils'
+import './index.scss'
 
-const Header = React.lazy(() => import('header/Header'));
+const Header = React.lazy(() => import('header/Header'))
 
 const HostApp = () => {
   const n = addNumbers(1, 2)
@@ -18,6 +18,6 @@ const HostApp = () => {
       </div>
     </div>
   )
-};
+}
 
-export default HostApp;
+export default HostApp

@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react'
 import Header from './Header'
-import "./index.scss";
+import './index.scss'
 
 const HeaderApp = () => (
   <Header title="Bar" />
-);
+)
 
-export default HeaderApp;
+export default HeaderApp
