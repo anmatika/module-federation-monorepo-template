@@ -2,7 +2,19 @@
 
 ## Desc
 
-Template for Typescript monorepo with module federation and shared libs
+Template for Typescript monorepo with module federation apps and shared lib packages.
+
+## Structure
+```
+/
+  /apps (module federation apps)
+    /host (the host app)
+    /header (remote app)
+  /libs (shared packages)
+    /utils (utilities)
+    /types (shared types)
+
+```
 
 ## Install deps and start apps
 
@@ -14,5 +26,19 @@ yarn start
 ```
 
 Lerna starts up apps at
+```
 - :8080 --> host app
 - :8081 --> header app
+```
+
+## Test
+
+```
+yarn test
+```
+## Lint
+
+```
+yarn lint
+```
+
