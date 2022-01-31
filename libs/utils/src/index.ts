@@ -1,2 +1,5 @@
-const addNumbers = (a: number, b: number): number => a + b
-export default addNumbers
+import addNumbers from './numbers/addNumbers'
+
+export {
+  addNumbers
+}

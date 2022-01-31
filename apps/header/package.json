@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "build": "webpack --mode production",
-    "kill-port": "kill-port -p 8081",
+    "kill-port": "kill-port --port 8081",
     "build:dev": "webpack --mode development",
     "build:start": "cd dist && PORT=8081 npx serve",
     "start": "webpack serve --open --mode development",

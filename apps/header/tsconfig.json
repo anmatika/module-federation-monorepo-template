@@ -5,7 +5,8 @@
   },
   "include": [
     "src/**/*",
-    "../../libs/**/src/*"
+    "../../libs/**/src/**/*.ts",
+    "../../libs/**/src/**/*.json"
   ],
   "references": [
     {

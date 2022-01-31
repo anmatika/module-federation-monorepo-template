@@ -3,9 +3,10 @@
   "compilerOptions": {
     "outDir": "./dist",
   },
-  "include": [
+   "include": [
     "src/**/*",
-    "../../libs/**/src/*"
+    "../../libs/**/src/**/*.ts",
+    "../../libs/**/src/**/*.json"
   ],
   "references": [
     {
