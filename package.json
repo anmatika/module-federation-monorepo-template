@@ -19,6 +19,7 @@
   },
   "scripts": {
     "start": "lerna run --parallel kill-port && lerna run --parallel start",
+    "build": "lerna run --parallel clean && lerna run build",
     "kill-ports": "lerna run --parallel kill-port",
     "lint": "eslint .",
     "test": "jest",

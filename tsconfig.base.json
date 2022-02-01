@@ -21,6 +21,10 @@
       "@antti/*": [
         "./libs/*/src"
       ]
-    }
+    },
   },
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
 }

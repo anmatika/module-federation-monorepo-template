@@ -4,6 +4,7 @@
   "scripts": {
     "build": "webpack --mode production",
     "kill-port": "kill-port --port 8081",
+    "clean": "rimraf dist",
     "build:dev": "webpack --mode development",
     "build:start": "cd dist && PORT=8081 npx serve",
     "start": "webpack serve --open --mode development",
@@ -35,6 +36,7 @@
     "kill-port": "^1.6.1",
     "postcss": "^8.2.1",
     "postcss-loader": "^4.1.0",
+    "rimraf": "^3.0.2",
     "style-loader": "^3.3.0",
     "tailwindcss": "^2.0.2",
     "ts-jest": "^27.1.3",
